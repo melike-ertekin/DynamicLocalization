@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DynamicLocalization</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="en_title">en</string>
+    <string name="tr_title">tr</string>
+    <string name="save_button">Save</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+</resources>
