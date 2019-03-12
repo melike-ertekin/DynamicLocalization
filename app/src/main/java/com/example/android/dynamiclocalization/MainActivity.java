@@ -53,9 +53,16 @@ public class MainActivity extends BaseActivity {
             getSupportActionBar().setTitle("EN");
             Locale.setDefault(new Locale("en"));
 
+
         } else if (menuItem == R.id.tr) {
             getSupportActionBar().setTitle("TR");
             Locale.setDefault(new Locale("tr"));
+            Log.d("current lang", Locale.getDefault().getLanguage());
+
+            //boyle bir sey denedim ama olmadi.
+            SampleStringsLoader s1 = new SampleStringsLoader();
+            Restring.setStrings("tr", s1.getStrings("tr"));
+
 
         }
         return super.onOptionsItemSelected(item);
