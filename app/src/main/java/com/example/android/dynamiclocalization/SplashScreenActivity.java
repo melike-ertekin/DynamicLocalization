@@ -19,8 +19,8 @@ import retrofit2.Response;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    public static Map<String, Map<String, String>> dictionary;
-    public static Map<String, String> langBasedMap;
+    private static Map<String, Map<String, String>> dictionary;
+    private static Map<String, String> langBasedMap;
 
 
     @Override
@@ -81,5 +81,13 @@ public class SplashScreenActivity extends AppCompatActivity {
     public static void setDictionaryBasedOnLanguages(String key) {
         langBasedMap = dictionary.get(key);
 
+    }
+
+    public static Map<String, Map<String, String>> getDictionary() {
+        return dictionary;
+    }
+
+    public static Map<String, String> getLangBasedMap() {
+        return langBasedMap;
     }
 }

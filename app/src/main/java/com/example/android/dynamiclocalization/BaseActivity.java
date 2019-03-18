@@ -1,10 +1,13 @@
 package com.example.android.dynamiclocalization;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.ice.restring.Restring;
+
+import java.util.Locale;
 
 /**
  * We should wrap the base context of our activities, which is better to put it
@@ -17,4 +20,6 @@ public class BaseActivity extends AppCompatActivity {
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(Restring.wrapContext(newBase));
     }
+
+
 }

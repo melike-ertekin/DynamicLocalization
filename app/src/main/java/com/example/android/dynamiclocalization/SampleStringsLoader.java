@@ -6,6 +6,7 @@ import com.example.android.dynamiclocalization.api.GetLanguageService;
 import com.example.android.dynamiclocalization.api.RetrofitInstance;
 import com.ice.restring.Restring;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -29,14 +30,14 @@ public class SampleStringsLoader implements Restring.StringsLoader {
 
     @Override
     public List<String> getLanguages() {
-        return Arrays.asList("en", "tr");
+        return new ArrayList<String>(SplashScreenActivity.getDictionary().keySet());
     }
 
     @Override
     public Map<String, String> getStrings(String language) {
 
         Map<String, String> map = new HashMap<>();
-        map = SplashScreenActivity.dictionary.get(language);
+        map = SplashScreenActivity.getDictionary().get(language);
         return map;
     }
 
