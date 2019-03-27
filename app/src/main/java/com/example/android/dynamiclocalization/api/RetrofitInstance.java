@@ -8,8 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitInstance {
 
-
-    private static final String BASE_URL = "https://my-json-server.typicode.com/melike-ertekin/testJSONDataDynamicLocalization/master/db.json/";
+    private static final String BASE_URL = "https://my-json-server.typicode.com/melike-ertekin/testStringsJson/master/db.json/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getRetrofitInstance() {

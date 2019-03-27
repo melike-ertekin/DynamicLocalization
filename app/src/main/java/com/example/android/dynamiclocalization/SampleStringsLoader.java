@@ -26,18 +26,19 @@ import retrofit2.Response;
 public class SampleStringsLoader implements Restring.StringsLoader {
 
 
-
-
     @Override
     public List<String> getLanguages() {
-        return new ArrayList<String>(SplashScreenActivity.getDictionary().keySet());
+        List<String> lang ;
+        lang=SplashScreenActivity.getLanguages();
+        return lang;
     }
+
+
 
     @Override
     public Map<String, String> getStrings(String language) {
-
-        Map<String, String> map = new HashMap<>();
-        map = SplashScreenActivity.getDictionary().get(language);
+        Map<String, String> map;
+        map = SplashScreenActivity.getLangBasedMap();
         return map;
     }
 
